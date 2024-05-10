@@ -9,8 +9,7 @@ Dobrodošli u projekat IntervjuPiO! Ovaj projekat je veb aplikacija koja služi 
 - [Instalacija](#instalacija)
 - [Pokretanje aplikacije](#pokretanje-aplikacije)
 - [Korišćenje](#korišćenje)
-- [Doprinose](#doprinose)
-- [Kontakt](#kontakt)
+- [Doprinosi](#doprinosi)
 
 ## Opis
 
@@ -75,7 +74,7 @@ Nakon ovih koraka, aplikacija će biti dostupna na [http://localhost:3000](http:
 - Aplikacija prikazuje listu dostupnih dokumenata.
 - Klikom na dokument možete ga preuzeti u docx formatu.
 
-## Doprinose
+## Doprinosi
 
 Pozivamo vas da doprinesete ovom projektu! Molimo vas da fork-ujete repozitorijum i kreirate pull request za bilo kakva poboljšanja ili ispravke grešaka.
 
