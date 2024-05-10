@@ -1,6 +1,6 @@
 # IntervjuPiO
 
-Dobrodošli u projekat IntervjuPiO! Ovaj projekat je veb aplikacija koja služi za učenje intervjua kroz pregled i preuzimanje dokumenata u različitim formatima.
+Dobrodošli u projekat IntervjuPiO! Ovaj projekat je veb aplikacija koja služi za učenje intervjua kroz preuzimanje dokumenata u docx formatu.
 
 ## Sadržaj
 
