@@ -28,7 +28,7 @@ Da biste instalirali projekat, pratite sledeće korake:
 
 1. **Klonirajte repozitorijum:**
     ```bash
-    git clone https://github.com/vas-korisnicki-nalog/intervjupio.git
+    git clone https://github.com/NikKnez/intervjupio.git
     ```
 
 2. **Pređite u direktorijum projekta:**
