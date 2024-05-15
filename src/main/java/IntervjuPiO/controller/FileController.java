@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,12 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import IntervjuPiO.model.FileDocument;
 import IntervjuPiO.repository.FileRepository;
 
+@CrossOrigin(origins = "https://intervjupio.netlify.app")
 @RestController
 public class FileController {
 
     @Autowired
     private FileRepository fileRepository;
 
+    @CrossOrigin(origins = "https://intervjupio.netlify.app")
     @GetMapping("/files")
     public ResponseEntity<List<FileDto>> listFiles() {
         // Retrieve all files from the repository
