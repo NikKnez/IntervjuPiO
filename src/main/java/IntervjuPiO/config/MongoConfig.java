@@ -19,7 +19,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        return MongoClients.create("mongodb+srv://nknezevic07:N!kol%4007@cluster0.lknjmwl.mongodb.net/");
+        return MongoClients.create("mongodb+srv://nknezevic07:N%21kol%4007@cluster0.lknjmwl.mongodb.net/intervju_db?retryWrites=true&w=majority");
     }
 
     @Bean
