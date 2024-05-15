@@ -48,6 +48,7 @@ public class FileController {
 
     }
 
+    @CrossOrigin(origins = "https://intervjupio.netlify.app")
     @GetMapping("/file/download/{id}")
     public ResponseEntity<byte[]> downloadFile(@PathVariable String id) {
         // Retrieve the file document by ID
