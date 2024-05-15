@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("https://intervjupio.netlify.app")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("Content-Type")
+                .allowedHeaders("Access-Control-Allow-Origin", "*")
                 .allowCredentials(true);
     }
 }
