@@ -1,0 +1,6 @@
+IntervjuPiO\IntervjuPiOApplication.class
+IntervjuPiO\model\FileDto.class
+IntervjuPiO\controller\FileController.class
+IntervjuPiO\config\MongoConfig.class
+IntervjuPiO\repository\FileRepository.class
+IntervjuPiO\model\FileDocument.class
