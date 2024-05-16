@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import IntervjuPiO.model.FileDto;
-import org.bson.types.Binary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,9 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import IntervjuPiO.model.FileDocument;
 import IntervjuPiO.repository.FileRepository;
 
-//@CrossOrigin(origins = "https://intervjupio.netlify.app")
+@CrossOrigin(origins = "https://intervjupio.netlify.app")
 @RestController
-@RequestMapping("/*")
+@RequestMapping
 public class FileController {
 
     @Autowired
