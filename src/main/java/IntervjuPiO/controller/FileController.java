@@ -22,6 +22,7 @@ public class FileController {
     @Autowired
     private FileRepository fileRepository;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/files")
     public ResponseEntity<List<FileDto>> listFiles() {
         // Retrieve all files from the repository
@@ -44,6 +45,7 @@ public class FileController {
 
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/file/download/{id}")
     public ResponseEntity<byte[]> downloadFile(@PathVariable String id) {
         // Retrieve the file document by ID
