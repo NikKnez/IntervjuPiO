@@ -13,10 +13,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://intervjupio.netlify.app")
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedOrigins("https://intervjupio.netlify.app/")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true)
                 .exposedHeaders("Content-Disposition");
     }
 

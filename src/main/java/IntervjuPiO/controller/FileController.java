@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import IntervjuPiO.model.FileDocument;
 import IntervjuPiO.repository.FileRepository;
 
-@CrossOrigin(origins = "https://intervjupio.netlify.app")
+@CrossOrigin(origins = "https://intervjupio.netlify.app/")
 @RestController
 @RequestMapping
 public class FileController {
