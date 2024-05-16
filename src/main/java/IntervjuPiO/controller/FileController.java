@@ -25,7 +25,6 @@ public class FileController {
     @Autowired
     private FileRepository fileRepository;
 
-    @CrossOrigin(origins = "https://intervjupio.netlify.app")
     @GetMapping("/files")
     public ResponseEntity<List<FileDto>> listFiles() {
         // Retrieve all files from the repository
@@ -48,7 +47,6 @@ public class FileController {
 
     }
 
-    @CrossOrigin(origins = "https://intervjupio.netlify.app")
     @GetMapping("/file/download/{id}")
     public ResponseEntity<byte[]> downloadFile(@PathVariable String id) {
         // Retrieve the file document by ID
