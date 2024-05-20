@@ -21,7 +21,7 @@ public class CorsConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("*"));
+        config.setAllowedOrigins(Arrays.asList("*"));
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.addExposedHeader("Content-Disposition");
