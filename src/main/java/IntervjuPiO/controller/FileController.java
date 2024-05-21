@@ -15,8 +15,8 @@ import IntervjuPiO.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
-@RequestMapping
-//@CrossOrigin(origins = "https://intervjupio.netlify.app")  // Enable CORS for specific origin
+@RequestMapping("/")
+@CrossOrigin(origins = "*")  // Enable CORS for specific origin
 public class FileController {
 
     @Autowired
