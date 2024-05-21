@@ -16,9 +16,4 @@ public class IntervjuPiOApplication {
 		SpringApplication.run(IntervjuPiOApplication.class, args);
 	}
 
-	@Bean
-	public WebServerFactoryCustomizer<TomcatServletWebServerFactory> servletContainerCustomizer() {
-		return factory -> factory.setPort(Integer.parseInt(System.getenv("PORT")));
-	}
-
 }
