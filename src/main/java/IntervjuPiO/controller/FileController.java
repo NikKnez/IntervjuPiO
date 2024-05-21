@@ -16,6 +16,7 @@ import IntervjuPiO.repository.FileRepository;
 
 @RestController
 @RequestMapping
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class FileController {
 
     @Autowired
