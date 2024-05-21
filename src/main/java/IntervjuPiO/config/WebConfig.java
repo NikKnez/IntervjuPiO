@@ -32,24 +32,18 @@ import java.util.Arrays;
 @Configuration
 public class WebConfig {
 
-    private static final int CORS_FILTER_ORDER = -102;
-
     @Bean
-    public FilterRegistrationBean<CorsFilter> corsFilter() {
+    public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = getCorsConfiguration();
         source.registerCorsConfiguration("/**", config);
-        FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
-
-        // should be set order to -102 because we need the CorsFilter to be processed before the SpringSecurityFilter
-        bean.setOrder(CORS_FILTER_ORDER);
-        return bean;
+        return new CorsFilter(source);
     }
 
     private static CorsConfiguration getCorsConfiguration() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOriginPattern("*");  // Use addAllowedOriginPattern for better compatibility
+        config.addAllowedOrigin("https://intervjupio.netlify.app");
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.AUTHORIZATION,
                 HttpHeaders.CONTENT_TYPE,
@@ -58,7 +52,8 @@ public class WebConfig {
                 HttpMethod.GET.name(),
                 HttpMethod.POST.name(),
                 HttpMethod.PUT.name(),
-                HttpMethod.DELETE.name()));
+                HttpMethod.DELETE.name(),
+                HttpMethod.OPTIONS.name()));
         return config;
     }
 }
