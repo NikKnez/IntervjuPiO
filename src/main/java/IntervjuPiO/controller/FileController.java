@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping
 @CrossOrigin(origins = "*")  // Enable CORS for specific origin
 public class FileController {
 
