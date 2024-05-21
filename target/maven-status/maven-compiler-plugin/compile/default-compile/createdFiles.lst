@@ -1,5 +1,6 @@
 IntervjuPiO\IntervjuPiOApplication.class
 IntervjuPiO\model\FileDto.class
+IntervjuPiO\config\SimpleCORSFilter.class
 IntervjuPiO\controller\FileController.class
 IntervjuPiO\config\MongoConfig.class
 IntervjuPiO\repository\FileRepository.class
