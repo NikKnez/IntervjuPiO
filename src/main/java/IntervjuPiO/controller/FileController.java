@@ -1,5 +1,6 @@
 package IntervjuPiO.controller;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.MediaType;
@@ -16,7 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "https://intervjupio.netlify.app/")
 public class FileController {
 
     @Autowired
@@ -40,10 +40,11 @@ public class FileController {
     @GetMapping("/file/download/{id}")
     public ResponseEntity<byte[]> downloadFile(@PathVariable String id) {
         FileDocument fileDocument = fileRepository.findById(id).orElse(null);
+
         if (fileDocument != null) {
             return ResponseEntity.ok()
                     .contentType(MediaType.parseMediaType(fileDocument.getFiletype()))
-                    .header("Content-Disposition", "attachment; filename=\"" + fileDocument.getFilename() + "\"")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + fileDocument.getFilename() + "\"")
                     .body(fileDocument.getContent().getData());
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
