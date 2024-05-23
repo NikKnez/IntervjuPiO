@@ -31,10 +31,10 @@ public class FileController {
 
 
     @GetMapping("/files")
-    public ResponseEntity<List<FileDto>> listFiles(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "100") int size) {
-        Pageable pageable = PageRequest.of(page, size);
-        Page<FileDocument> filePage = fileRepository.findAll(pageable);
-        List<FileDto> fileDtos = filePage.getContent().stream().map(file -> {
+    public ResponseEntity<List<FileDto>> listFiles() {
+        //Pageable pageable = PageRequest.of(size);
+        List<FileDocument> files = fileRepository.findAll();
+        List<FileDto> fileDtos = files.stream().map(file -> {
             FileDto fileDto = new FileDto();
             fileDto.setId(file.getId());
             fileDto.setFilename(file.getFilename());
@@ -43,7 +43,7 @@ public class FileController {
             fileDto.setBase64Content(base64Content);
             return fileDto;
         }).collect(Collectors.toList());
-        logger.info("Page: {}, Size: {}, Total Elements: {}", page, size, filePage.getTotalElements());
+        logger.info("Total Elements: {}", files.getLast());
 
 
         return ResponseEntity.ok(fileDtos);
