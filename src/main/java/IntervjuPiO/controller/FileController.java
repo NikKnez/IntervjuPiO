@@ -1,5 +1,7 @@
 package IntervjuPiO.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +27,9 @@ public class FileController {
     @Autowired
     private FileRepository fileRepository;
 
+    private static final Logger logger = LoggerFactory.getLogger(FileController.class);
+
+
     @GetMapping("/files")
     public ResponseEntity<List<FileDto>> listFiles(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "100") int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -38,6 +43,9 @@ public class FileController {
             fileDto.setBase64Content(base64Content);
             return fileDto;
         }).collect(Collectors.toList());
+        logger.info("Page: {}, Size: {}, Total Elements: {}", page, size, filePage.getTotalElements());
+
+
         return ResponseEntity.ok(fileDtos);
     }
 
