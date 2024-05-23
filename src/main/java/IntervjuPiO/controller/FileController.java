@@ -26,7 +26,7 @@ public class FileController {
     private FileRepository fileRepository;
 
     @GetMapping("/files")
-    public ResponseEntity<List<FileDto>> listFiles(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+    public ResponseEntity<List<FileDto>> listFiles(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "100") int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<FileDocument> filePage = fileRepository.findAll(pageable);
         List<FileDto> fileDtos = filePage.getContent().stream().map(file -> {
