@@ -4,8 +4,7 @@ import lombok.*;
 import org.bson.types.Binary;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Data
 @Document(collection = "files")
 public class FileDocument {
