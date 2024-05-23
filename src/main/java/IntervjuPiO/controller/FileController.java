@@ -1,8 +1,5 @@
 package IntervjuPiO.controller;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -26,10 +23,9 @@ public class FileController {
     private FileRepository fileRepository;
 
     @GetMapping("/files")
-    public ResponseEntity<List<FileDto>> listFiles(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
-        Pageable pageable = PageRequest.of(page, size);
-        Page<FileDocument> filePage = fileRepository.findAll(pageable);
-        List<FileDto> fileDtos = filePage.getContent().stream().map(file -> {
+    public ResponseEntity<List<FileDto>> listFiles() {
+        List<FileDocument> files = fileRepository.findAll();
+        List<FileDto> fileDtos = files.stream().map(file -> {
             FileDto fileDto = new FileDto();
             fileDto.setId(file.getId());
             fileDto.setFilename(file.getFilename());
