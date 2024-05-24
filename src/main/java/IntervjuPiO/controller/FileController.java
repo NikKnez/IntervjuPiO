@@ -49,6 +49,23 @@ public class FileController {
         return ResponseEntity.ok(fileDtos);
     }
 
+    @GetMapping("/file/details/{id}")
+    public ResponseEntity<FileDto> getFile(@PathVariable String id) {
+        FileDocument fileDocument = fileRepository.findById(id).orElse(null);
+
+        if (fileDocument != null) {
+            FileDto fileDto = new FileDto();
+            fileDto.setId(fileDocument.getId());
+            fileDto.setFilename(fileDocument.getFilename());
+            fileDto.setFiletype(fileDocument.getFiletype());
+            fileDto.setBase64Content(Base64.getEncoder().encodeToString(fileDocument.getContent().getData()));
+
+            return ResponseEntity.ok(fileDto);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+
     @GetMapping("/file/download/{id}")
     public ResponseEntity<byte[]> downloadFile(@PathVariable String id) {
         FileDocument fileDocument = fileRepository.findById(id).orElse(null);
