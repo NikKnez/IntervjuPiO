@@ -74,6 +74,10 @@ Nakon ovih koraka, aplikacija će biti dostupna na [http://localhost:3000](http:
 - Aplikacija prikazuje listu dostupnih dokumenata.
 - Klikom na dokument možete ga preuzeti u docx formatu.
 
+## Uživo Demo
+
+[Pogledajte uživo demo](https://intervjupio.netlify.app) IntervjuPiO.
+
 ## Doprinosi
 
 Pozivamo vas da doprinesete ovom projektu! Molimo vas da fork-ujete repozitorijum i kreirate pull request za bilo kakva poboljšanja ili ispravke grešaka.
