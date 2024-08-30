@@ -1,81 +1,87 @@
 # IntervjuPiO
 
-Dobrodošli u projekat IntervjuPiO! Ovaj projekat je veb aplikacija koja služi za učenje intervjua kroz preuzimanje dokumenata u docx formatu.
+Welcome to the IntervjuPiO project! This project is a web application designed for interview learning through downloading documents in docx format.
 
-## Sadržaj
+*Read this in other languages: [Serbian](README.sr.md)
 
-- [Opis](#opis)
-- [Tehnologije](#tehnologije)
-- [Instalacija](#instalacija)
-- [Pokretanje aplikacije](#pokretanje-aplikacije)
-- [Korišćenje](#korišćenje)
-- [Doprinosi](#doprinosi)
+## Contents
 
-## Opis
+- [Description](#description)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Contributions](#contributions)
 
-IntervjuPiO je aplikacija koja omogućava pregled i preuzimanje dokumenata sa pitanjima i odgovorima za intervjue. Aplikacija se sastoji od Spring Boot backend-a, React frontend-a i MongoDB baze podataka.
+## Description
 
-## Tehnologije
+IntervjuPiO is an application that allows viewing and downloading documents with interview questions and answers. The application consists of a Spring Boot backend, a React frontend, and a MongoDB database.
 
-- [Spring Boot](https://spring.io/projects/spring-boot): Backend okvir za Java aplikacije.
-- [React](https://reactjs.org/): Biblioteka za izradu interaktivnih veb aplikacija.
-- [MongoDB](https://www.mongodb.com/): NoSQL baza podataka za skladištenje dokumenata.
+## Technologies
 
-## Instalacija
+- [Spring Boot](https://spring.io/projects/spring-boot): A backend framework for Java applications.
+- [React](https://reactjs.org/): A library for building interactive web applications.
+- [MongoDB](https://www.mongodb.com/): A NoSQL database for storing documents.
 
-Da biste instalirali projekat, pratite sledeće korake:
+## Installation
 
-1. **Klonirajte repozitorijum:**
+To install the project, follow these steps:
+
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/NikKnez/intervjupio.git
     ```
 
-2. **Pređite u direktorijum projekta:**
+2. **Navigate to the project directory:**
     ```bash
     cd intervjupio
     ```
 
-3. **Instalirajte zavisnosti:**
-    - Za backend:
+3. **Install dependencies:**
+    - For the backend:
         ```bash
         cd backend
         mvn clean install
         ```
-    - Za frontend:
+    - For the frontend:
         ```bash
         cd frontend
         npm install
         ```
 
-4. **Konfigurišite MongoDB:**
-    - Podesite MongoDB bazu podataka koristeći MongoDB Atlas ili drugu uslugu.
-    - Promenite `application.properties` u direktorijumu `backend` sa podacima o vašoj bazi podataka.
+4. **Configure MongoDB:**
+    - Set up the MongoDB database using MongoDB Atlas or another service.
+    - Update `application.properties` in the `backend` directory with your database details.
 
-## Pokretanje aplikacije
+## Running the Application
 
-Nakon što ste instalirali aplikaciju, možete je pokrenuti:
+After installing the application, you can run it:
 
-- **Pokrenite backend:**
+- **Start the backend:**
     ```bash
     cd backend
     mvn spring-boot:run
     ```
 
-- **Pokrenite frontend:**
+- **Start the frontend:**
     ```bash
     cd frontend
     npm start
     ```
 
-Nakon ovih koraka, aplikacija će biti dostupna na [http://localhost:3000](http://localhost:3000).
+After these steps, the application will be available at [http://localhost:3000](http://localhost:3000).
 
-## Korišćenje
+## Usage
 
-- Aplikacija prikazuje listu dostupnih dokumenata.
-- Klikom na dokument možete ga preuzeti u docx formatu.
+- The application displays a list of available documents.
+- By clicking on a document, you can download it in docx format.
 
-## Doprinosi
+## Live Demo
 
-Pozivamo vas da doprinesete ovom projektu! Molimo vas da fork-ujete repozitorijum i kreirate pull request za bilo kakva poboljšanja ili ispravke grešaka.
+[Check out the live demo](https://intervjupio.netlify.app) IntervjuPiO.
 
-**Razvio [NikKnez](https://github.com/NikKnez)**
+## Contributions
+
+I invite you to contribute to this project! Please fork the repository and create a pull request for any improvements or bug fixes.
+
+**Developed by [NikKnez](https://github.com/NikKnez)**
