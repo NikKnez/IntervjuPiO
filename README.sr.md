@@ -80,6 +80,6 @@ Nakon ovih koraka, aplikacija će biti dostupna na [http://localhost:3000](http:
 
 ## Doprinosi
 
-Pozivamo vas da doprinesete ovom projektu! Molimo vas da fork-ujete repozitorijum i kreirate pull request za bilo kakva poboljšanja ili ispravke grešaka.
+Pozivam vas da doprinesete ovom projektu! Molimo vas da fork-ujete repozitorijum i kreirate pull request za bilo kakva poboljšanja ili ispravke grešaka.
 
 **Razvio [NikKnez](https://github.com/NikKnez)**
