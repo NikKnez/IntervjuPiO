@@ -1,84 +1,81 @@
 # IntervjuPiO
 
-Welcome to the IntervjuPiO project! This project is a web application designed for interview learning through downloading documents in docx format.
-*Read this in other languages: [Srpski](README.sr.md)
+Dobrodošli u projekat IntervjuPiO! Ovaj projekat je veb aplikacija koja služi za učenje intervjua kroz preuzimanje dokumenata u docx formatu.
 
-## Contents
+## Sadržaj
 
-- [Description](#description)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Running the Application](#running)
-- [Usage](#usage)
-- [Contributions](#contributions)
+- [Opis](#opis)
+- [Tehnologije](#tehnologije)
+- [Instalacija](#instalacija)
+- [Pokretanje aplikacije](#pokretanje-aplikacije)
+- [Korišćenje](#korišćenje)
+- [Doprinosi](#doprinosi)
 
-## Description
+## Opis
 
-IntervjuPiO is an application that allows viewing and downloading documents with interview questions and answers. The application consists of a Spring Boot backend, a React frontend, and a MongoDB database.
-## Technologies
+IntervjuPiO je aplikacija koja omogućava pregled i preuzimanje dokumenata sa pitanjima i odgovorima za intervjue. Aplikacija se sastoji od Spring Boot backend-a, React frontend-a i MongoDB baze podataka.
 
-- [Spring Boot](https://spring.io/projects/spring-boot): A backend framework for Java applications.
-- [React](https://reactjs.org/): A library for building interactive web applications.
-- [MongoDB](https://www.mongodb.com/): A NoSQL database for storing documents.
+## Tehnologije
 
-## Installation
+- [Spring Boot](https://spring.io/projects/spring-boot): Backend okvir za Java aplikacije.
+- [React](https://reactjs.org/): Biblioteka za izradu interaktivnih veb aplikacija.
+- [MongoDB](https://www.mongodb.com/): NoSQL baza podataka za skladištenje dokumenata.
 
-To install the project, follow these steps:
+## Instalacija
 
-1. **Clone the repository:**
+Da biste instalirali projekat, pratite sledeće korake:
+
+1. **Klonirajte repozitorijum:**
     ```bash
     git clone https://github.com/NikKnez/intervjupio.git
     ```
 
-2. **Navigate to the project directory:**
+2. **Pređite u direktorijum projekta:**
     ```bash
     cd intervjupio
     ```
 
-3. **Install dependencies:**
-    - For the backend:
+3. **Instalirajte zavisnosti:**
+    - Za backend:
         ```bash
         cd backend
         mvn clean install
         ```
-    - For the frontend:
+    - Za frontend:
         ```bash
         cd frontend
         npm install
         ```
 
-4. **Configure MongoDB:**
-    - Set up the MongoDB database using MongoDB Atlas or another service.
-    - Update `application.properties` in the `backend` directory with your database details.
+4. **Konfigurišite MongoDB:**
+    - Podesite MongoDB bazu podataka koristeći MongoDB Atlas ili drugu uslugu.
+    - Promenite `application.properties` u direktorijumu `backend` sa podacima o vašoj bazi podataka.
 
-## Running the Application
+## Pokretanje aplikacije
 
-After installing the application, you can run it:
+Nakon što ste instalirali aplikaciju, možete je pokrenuti:
 
-- **Start the backend:**
+- **Pokrenite backend:**
     ```bash
     cd backend
     mvn spring-boot:run
     ```
 
-- **Start the frontend:**
+- **Pokrenite frontend:**
     ```bash
     cd frontend
     npm start
     ```
 
-After these steps, the application will be available at [http://localhost:3000](http://localhost:3000).
+Nakon ovih koraka, aplikacija će biti dostupna na [http://localhost:3000](http://localhost:3000).
 
-## Usage
+## Korišćenje
 
-- The application displays a list of available documents.
-- By clicking on a document, you can download it in docx format.
+- Aplikacija prikazuje listu dostupnih dokumenata.
+- Klikom na dokument možete ga preuzeti u docx formatu.
 
-## Live Demo
+## Doprinosi
 
-[Check out the live demo](https://intervjupio.netlify.app) IntervjuPiO.
+Pozivamo vas da doprinesete ovom projektu! Molimo vas da fork-ujete repozitorijum i kreirate pull request za bilo kakva poboljšanja ili ispravke grešaka.
 
-## Contributions
-
-We invite you to contribute to this project! Please fork the repository and create a pull request for any improvements or bug fixes.
-**Developed by [NikKnez](https://github.com/NikKnez)**
+**Razvio [NikKnez](https://github.com/NikKnez)**
